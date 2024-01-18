@@ -1,1 +1,10 @@
 streamlit==1.28.1
+PyPDF2
+neo4j
+nltk
+google-generativeai
+faiss-cpu
+langchain
+python-dotenv
+langchain-google-genai
+langchain-community

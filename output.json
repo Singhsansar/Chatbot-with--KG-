@@ -1,0 +1,119 @@
+[
+  [
+    {
+      "source": "buddha",
+      "target": "siddartha gautama",
+      "label": "also_known_as"
+    },
+    {
+      "source": "siddartha gautama",
+      "target": "563 b.c.",
+      "label": "born_in"
+    },
+    {
+      "source": "siddartha gautama",
+      "target": "lumbini",
+      "label": "born_in"
+    },
+    {
+      "source": "lumbini",
+      "target": "india",
+      "label": "near"
+    },
+    {
+      "source": "nepal",
+      "target": "south asia",
+      "label": "located_in"
+    },
+    {
+      "source": "nepal",
+      "target": "british",
+      "label": "controlled_by"
+    },
+    {
+      "source": "british",
+      "target": "nepal",
+      "label": "signed_treaty_with"
+    },
+    {
+      "source": "nepal",
+      "target": "1816",
+      "label": "signed_treaty_in"
+    },
+    {
+      "source": "nepal",
+      "target": "britain",
+      "label": "gave_land_to"
+    },
+    {
+      "source": "nepal",
+      "target": "1951",
+      "label": "closed_border_in"
+    },
+    {
+      "source": "mount everest",
+      "target": "western",
+      "label": "known_as"
+    },
+    {
+      "source": "mount everest",
+      "target": "sir georg everest",
+      "label": "named_by"
+    },
+    {
+      "source": "sir georg everest",
+      "target": "1863",
+      "label": "named_in"
+    },
+    {
+      "source": "mount everest",
+      "target": "sherpa",
+      "label": "called_as"
+    },
+    {
+      "source": "sherpa",
+      "target": "chomolungma",
+      "label": "called_as"
+    },
+    {
+      "source": "chomolungma",
+      "target": "goddess mother world",
+      "label": "means"
+    },
+    {
+      "source": "mount everest",
+      "target": "qomolangma",
+      "label": "called_as"
+    },
+    {
+      "source": "mount everest",
+      "target": "sagarmatha",
+      "label": "called_as"
+    },
+    {
+      "source": "sagarmatha",
+      "target": "forehead sky",
+      "label": "means"
+    },
+    {
+      "source": "sir edmund hilari",
+      "target": "sherpa",
+      "label": "guided_by"
+    },
+    {
+      "source": "sir edmund hilari",
+      "target": "mount everest",
+      "label": "reached_summit_of"
+    },
+    {
+      "source": "sir edmund hilari",
+      "target": "1953",
+      "label": "reached_summit_in"
+    },
+    {
+      "source": "mani tri",
+      "target": "mount everest",
+      "label": "failed_to_reach_top_of"
+    }
+  ]
+]
