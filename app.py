@@ -31,7 +31,6 @@ def main():
     if user_question:
         user_input(user_question)
 
-
     # Sidebar , for the text and pdfs embeddings 
     with st.sidebar:
         st.title("Menu:")
@@ -46,7 +45,7 @@ def main():
                 if input_type == "Text Input":
                     process_user_input(user_input_text)  
                 elif input_type == "Upload PDF":
-                    st.write("PDF processing logic goes here")
+                    st.write("PDF processing...")
                     text = read_pdf.get_pdf_text(pdf_file)
                     process_user_input(user_input_text)
                 st.success("Done")

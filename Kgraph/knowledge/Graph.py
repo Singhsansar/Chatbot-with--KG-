@@ -1,7 +1,13 @@
+import os 
 from neo4j import GraphDatabase
-uri = "bolt://3.87.189.181:7687"
-username = "neo4j"
-password = "women-armful-requirement"
+from dotenv import load_dotenv
+
+
+load_dotenv('.env')
+uri = os.getenv('neo4j_uri')
+username = os.getenv('neo4j_username')
+password = os.getenv('neo4j_password')
+
 driver = GraphDatabase.driver(uri, auth=(username, password))
 
 def insert_into_graph_database(source_id, source_label, target_id, target_label, relationship_type, relationship_weight=1):
@@ -30,27 +36,24 @@ def delete_nodes_and_relationships():
 #-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 def query_graph_for_answer(user_question):
     """Queries the graph for answers relevant to the user's question."""
-    uri = "bolt://3.87.189.181:7687"
-    username = "neo4j"
-    password = "women-armful-requirement"
     driver = GraphDatabase.driver(uri, auth=(username, password))
 
-    # Define a generic Cypher query to match nodes based on labels
-    cypher_query = (
+    # Split the user's question into words
+    question_words = user_question.lower().split()
+
+    # Define a template for the Cypher query
+    cypher_query_template = (
         "MATCH (source)-[r]->(target) "
-        "WHERE toLower(source.label) = $label OR toLower(target.label) = $label "
+        "WHERE {conditions} "
         "RETURN source.label AS source, type(r) AS relationship, target.label AS target"
     )
+    conditions = " OR ".join([f"toLower(source.label) CONTAINS '{word}' OR toLower(target.label) CONTAINS '{word}'" for word in question_words])
+    cypher_query = cypher_query_template.format(conditions=conditions)
 
     with driver.session() as session:
-        result = session.run(cypher_query, label=user_question.lower())
+        result = session.run(cypher_query)
         answers = [f"{record['source']} - {record['relationship']} - {record['target']}" for record in result]
 
         return cypher_query, answers
 
-# Example usage:
-question = "Who is  also_known_as Siddartha Gautama?"
-query, response = query_graph_for_answer(question)
-print(f"Generated Cypher Query: {query}")
-print(f"Response: {response}")
 
