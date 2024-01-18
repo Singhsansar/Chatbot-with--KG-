@@ -22,6 +22,6 @@ def read_json_insert_graph(file_path):
     for relationships_list in json_data:
         for relationship in relationships_list:
             source = relationship['source']
-            label = relationship['label']
             target = relationship['target']
-            Graph.insert_into_graph_database(source, target, label)
+            label = relationship['label']
+            Graph.insert_into_graph_database(source_id=source, source_label=source, target_id=target, target_label=target, relationship_type=label, relationship_weight=1)

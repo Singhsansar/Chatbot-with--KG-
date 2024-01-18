@@ -31,11 +31,6 @@
       "label": "controlled_by"
     },
     {
-      "source": "british",
-      "target": "nepal",
-      "label": "signed_treaty_with"
-    },
-    {
       "source": "nepal",
       "target": "1816",
       "label": "signed_treaty_in"
@@ -67,13 +62,13 @@
     },
     {
       "source": "mount everest",
-      "target": "sherpa",
-      "label": "called_as"
+      "target": "chomolungma",
+      "label": "also_known_as"
     },
     {
-      "source": "sherpa",
-      "target": "chomolungma",
-      "label": "called_as"
+      "source": "chomolungma",
+      "target": "sherpa",
+      "label": "called_by"
     },
     {
       "source": "chomolungma",
@@ -83,12 +78,12 @@
     {
       "source": "mount everest",
       "target": "qomolangma",
-      "label": "called_as"
+      "label": "also_known_as"
     },
     {
       "source": "mount everest",
       "target": "sagarmatha",
-      "label": "called_as"
+      "label": "also_known_as"
     },
     {
       "source": "sagarmatha",
