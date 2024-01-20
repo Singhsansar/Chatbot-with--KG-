@@ -1,6 +1,8 @@
-import streamlit as st
-import pathlib
+import os 
 import time
+import pathlib
+import streamlit as st
+from Kgraph.chatbot import bot
 from Kgraph.knowledge import Graph
 from Kgraph.pdfs import read_pdf
 from Kgraph.cleaning import nlp_clean
@@ -9,19 +11,26 @@ from Kgraph.cleaning import save_relation
 from Kgraph.knowledge import Graph
 
 def process_user_input(user_input):
-    Graph.delete_nodes_and_relationships()
-    text = nlp_clean.preprocess(user_input)
+    Graph.delete_nodes_and_relationships()  
+    temp = ''
+    tokens = user_input.split()
+    for i in range(0,len(tokens),500):
+        temp = tokens[i:i+500]
+        sentence = ' '.join(temp)
+    text = nlp_clean.preprocess(sentence)
     response = geminisetup.get_relationship(text)
     json_data = nlp_clean.clean_text(response)
     save_relation.append_to_json_file(json_data)
     time.sleep(1)
     json_path = pathlib.Path.cwd() / "output.json"
     save_relation.read_json_insert_graph(json_path)
+    if os.path.exists(json_path):
+     os.remove(json_path)
     
+
 def user_input(user_question): 
-    #querying the knowledge graph for the answer to the user's question
-    answer = Graph.query_graph_for_answer(user_question)
-    st.write("Graphs's Reply: ", answer)
+    answer = bot.get_answer_from_text(user_question)
+    st.write("Graphs's Reply: ", answer)  
     
 
 def main():

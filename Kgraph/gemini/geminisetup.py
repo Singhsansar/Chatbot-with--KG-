@@ -15,20 +15,15 @@ genai.configure(api_key=GOOGLE_API_KEY)
 model = genai.GenerativeModel('gemini-pro')
 
 def get_relationship(processed_tokens):
-    prompt = f"""
-    Analyze the given information to extract relationships from the processed tokens. Your objective is to identify causal, semantic, and temporal connections \n
-    between two objects and even dates. Generate the output in JSON format, specifying entities as source, target, and label for each relationship. Ensure that the \n 
-    representations reflect causal connections, exhibit semantic coherence, and consider temporal aspects to avoid unnecessary repetition. \n
-    Provide the output in JSON format for ease of constructing a knowledge graph. Focus on capturing relationships that form meaningful sentences when considering source + label + target. Feel free to introduce additional relationships if needed.\n
-    All the captured relationships should be authentic, meaningful, and in the format of source, target, label. Ensure that all words returned are lemmatized.\n
-    Do not capture incorrect or illegal relationships and make the proper use of the words to define relationship.\n
+    prompt = f"""Given the provided information in processed tokens, your task is to analyze and extract relationships. Focus on identifying causal, semantic, and temporal connections between objects and dates. Present the output in JSON format, specifying entities as source, target, and label for each relationship. Emphasize meaningful sentences in the representation, ensuring lemmatization and coherence. Introduce additional relationships if necessary, but maintain authenticity and relevance. Avoid capturing incorrect or illegal relationships, and use underscores to connect multiple words in labels or node connections. Your final output should be a JSON format highlighting the source, target, and label of each captured relationship.\n
+     make the Nodes as short as possible, don't use long sentences as nodes, unless very necessary , capture all possible relationship with repeatation\n
     \n\n
     Information:
     {processed_tokens}
     """
     response = model.generate_content(prompt,
                                   generation_config=genai.types.GenerationConfig(
-                                  temperature=0.3))
+                                  temperature=1))
     data = response.text
     return data
     

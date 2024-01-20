@@ -1,114 +1,134 @@
 [
   [
     {
-      "source": "buddha",
-      "target": "siddartha gautama",
-      "label": "also_known_as"
+      "source": "Nepal",
+      "target": "South Asia",
+      "label": "geographically_situated"
     },
     {
-      "source": "siddartha gautama",
-      "target": "563 b.c.",
-      "label": "born_in"
+      "source": "Nepal",
+      "target": "Kathmandu",
+      "label": "capital_city"
     },
     {
-      "source": "siddartha gautama",
-      "target": "lumbini",
-      "label": "born_in"
+      "source": "Nepal",
+      "target": "Mount Everest",
+      "label": "highest_point"
     },
     {
-      "source": "lumbini",
-      "target": "india",
-      "label": "near"
+      "source": "Nepal",
+      "target": "Himalayan branch of ancient silk road",
+      "label": "prominent_trading_route"
     },
     {
-      "source": "nepal",
-      "target": "south asia",
-      "label": "located_in"
+      "source": "Nepal",
+      "target": "Nepal mandala",
+      "label": "seat_of_Newar_confederacy"
     },
     {
-      "source": "nepal",
-      "target": "british",
-      "label": "controlled_by"
+      "source": "Gorkha kingdom",
+      "target": "Nepal",
+      "label": "achievement_of_unified_state"
     },
     {
-      "source": "nepal",
-      "target": "1816",
-      "label": "signed_treaty_in"
+      "source": "Rana dynasty",
+      "target": "Nepal",
+      "label": "premiership"
     },
     {
-      "source": "nepal",
-      "target": "britain",
-      "label": "gave_land_to"
+      "source": "British Empire",
+      "target": "Nepal",
+      "label": "alliance"
     },
     {
-      "source": "nepal",
-      "target": "1951",
-      "label": "closed_border_in"
+      "source": "Nepal",
+      "target": "British India",
+      "label": "buffer_state"
     },
     {
-      "source": "mount everest",
-      "target": "western",
-      "label": "known_as"
+      "source": "Nepal",
+      "target": "China",
+      "label": "buffer_state"
     },
     {
-      "source": "mount everest",
-      "target": "sir georg everest",
-      "label": "named_by"
+      "source": "Nepal",
+      "target": "Parliamentary democracy",
+      "label": "introductory_year_1951"
     },
     {
-      "source": "sir georg everest",
-      "target": "1863",
-      "label": "named_in"
+      "source": "Nepal",
+      "target": "Monarchy",
+      "label": "suspension_of_1960_and_2005"
     },
     {
-      "source": "mount everest",
-      "target": "chomolungma",
-      "label": "also_known_as"
+      "source": "Nepal",
+      "target": "Nepalese Civil War",
+      "label": "start_year_1990"
     },
     {
-      "source": "chomolungma",
-      "target": "sherpa",
-      "label": "called_by"
+      "source": "Nepalese Civil War",
+      "target": "Republic of Nepal",
+      "label": "establishment_in_2008"
     },
     {
-      "source": "chomolungma",
-      "target": "goddess mother world",
-      "label": "means"
+      "source": "Republic of Nepal",
+      "target": "Hindu monarchy",
+      "label": "end_of"
     },
     {
-      "source": "mount everest",
-      "target": "qomolangma",
-      "label": "also_known_as"
+      "source": "Nepal",
+      "target": "Constitution of Nepal",
+      "label": "adoption_year_2015"
     },
     {
-      "source": "mount everest",
-      "target": "sagarmatha",
-      "label": "also_known_as"
+      "source": "Nepal",
+      "target": "United Nations",
+      "label": "admission_year_1955"
     },
     {
-      "source": "sagarmatha",
-      "target": "forehead sky",
-      "label": "means"
+      "source": "India",
+      "target": "Nepal",
+      "label": "friendship_treaty_signing_year_1950"
     },
     {
-      "source": "sir edmund hilari",
-      "target": "sherpa",
-      "label": "guided_by"
+      "source": "China",
+      "target": "Nepal",
+      "label": "friendship_treaty_signing_year_1960"
     },
     {
-      "source": "sir edmund hilari",
-      "target": "mount everest",
-      "label": "reached_summit_of"
+      "source": "Nepal",
+      "target": "SAARC",
+      "label": "host_of_permanent_secretariat"
     },
     {
-      "source": "sir edmund hilari",
-      "target": "1953",
-      "label": "reached_summit_in"
+      "source": "Nepal",
+      "target": "SAARC",
+      "label": "founding_member"
     },
     {
-      "source": "mani tri",
-      "target": "mount everest",
-      "label": "failed_to_reach_top_of"
+      "source": "Nepal",
+      "target": "Non-Aligned Movement",
+      "label": "membership"
+    },
+    {
+      "source": "Nepal",
+      "target": "Bay of Bengal Initiative",
+      "label": "membership"
+    },
+    {
+      "source": "Nepalese Armed Forces",
+      "target": "South Asia",
+      "label": "fifth_largest"
+    },
+    {
+      "source": "Nepalese Gurkhas",
+      "target": "World Wars",
+      "label": "fought_historically"
+    },
+    {
+      "source": "Nepalese Gurkhas",
+      "target": "UN peacekeeping operations",
+      "label": "significant_contribution"
     }
   ]
 ]
