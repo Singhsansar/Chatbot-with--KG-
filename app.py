@@ -17,7 +17,7 @@ def process_user_input(user_input):
     for i in range(0,len(tokens),500):
         temp = tokens[i:i+500]
         sentence = ' '.join(temp)
-    text = nlp_clean.preprocess(sentence)
+    text = nlp_clean.preprocess(user_input)
     response = geminisetup.get_relationship(text)
     json_data = nlp_clean.clean_text(response)
     save_relation.append_to_json_file(json_data)
@@ -30,6 +30,7 @@ def process_user_input(user_input):
 
 def user_input(user_question): 
     answer = bot.get_answer_from_text(user_question)
+    
     st.write("Graphs's Reply: ", answer)  
     
 
@@ -40,7 +41,7 @@ def main():
     if user_question:
         user_input(user_question)
 
-    # Sidebar , for the text and pdfs embeddings 
+    #Sidebar , for the text and pdfs embeddings 
     with st.sidebar:
         st.title("Menu:")
         st.subheader("User Input Options")
@@ -56,7 +57,7 @@ def main():
                 elif input_type == "Upload PDF":
                     st.write("PDF processing...")
                     text = read_pdf.get_pdf_text(pdf_file)
-                    process_user_input(user_input_text)
+                    process_user_input(text)
                 st.success("Done")
 
 if __name__ == "__main__":
